@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prelaunch</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link href="css/icofont.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div
+        class="container d-flex align-items-center justify-content-lg-between"
+      >
+        <a href="index.html" class="logo me-auto me-lg-0"
+          ><img
+            src="assets/img/prelaunchprops_logo_Design_Updated_Colors-(3).png"
+            alt=""
+            class="img-fluid"
+        /></a>
+        <nav id="navbar" class="order-last order-lg-0">
+          <ul>
+            <li>
+              <a class="nav-link scrollto active" href="index.html">Home</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="" >
+      <div class="row">
+        <div class="col-md-9">
+          <h2 class="ml-5">Property Data</h2>
+        </div>
+        <div class="col-md-3 text-right">
+          <button class="btn btn-primary mr-5" id="addData">Add</button>
+        </div>
+      </div>
+      <table id="propertyTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>SR</th>
+            <th>Builder Name</th>
+            <th>BHK</th>
+            <th>Project Name</th>
+            <th>Budget</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Area</th>
+            <th>Floor Plan</th>
+            <th>Amenities</th>
+            <th>No. of Towers</th>
+            <th>No. of Floors</th>
+            <th>Possession Date</th>
+            <th>Land Parcel</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table body will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Property Details Modal -->
+    <div
+      class="modal"
+      id="propertyDetailsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="propertyDetailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="propertyDetailsModalLabel">
+              Property Details
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="propertyDetailsBody">
+            <!-- Property details will be populated dynamically -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fetch data from API and populate the table
+      function fetchDataAndPopulateTable() {
+        fetch("http://localhost:5000/properties/getallproperties")
+          .then((response) => response.json())
+          .then((data) => {
+            const tableBody = document.querySelector("#propertyTable tbody");
+
+            data.gettAllProperty.forEach((property, index) => {
+              const row = `
+                          <tr data-id="${property._id}">
+                            <td>${index + 1}</td>
+                            <td>${property.builderName}</td>
+                            <td>${property.bhk}</td>
+                            <td>${property.projectName}</td>
+                            <td>${property.propertybudget} ${
+                property.propertybudget_unit
+              }</td>
+                            <td>${property.propertylocation}</td>
+                            <td>${property.propertydescription}</td>
+                            <td><img class="card-img-top mt-3" src="http://localhost:5000/${
+                              property.image
+                            }" alt="Property Image"></td>
+                            <td>${property.propertyArea} ${
+                property.propertyArea_unit
+              }</td>
+                            <td>${property.floorplan}</td>
+                            <td>${property.amenities}</td>
+                            <td>${property.numberofTowers}</td>
+                            <td>${property.numberoffloors}</td>
+                            <td>${property.possession}</td>
+                            <td>${property.landParcel} ${
+                property.landParcelUnit
+              }</td>
+                            <td>
+                                <i class="fa-solid fa-trash delete-icon" style="color: red; cursor: pointer;"></i> 
+                                <i class="fa-regular fa-pen-to-square" style="cursor: pointer;"></i>
+                            </td>
+                          </tr>
+                        `;
+              tableBody.insertAdjacentHTML("beforeend", row);
+            });
+
+            // Add event listeners to delete and details icons
+            const deleteIcons = document.querySelectorAll(".delete-icon");
+            deleteIcons.forEach((icon) => {
+              icon.addEventListener("click", function () {
+                // Display confirmation dialog
+                const isConfirmed = window.confirm(
+                  "Are you sure you want to delete this record?"
+                );
+
+                // If user confirms deletion, proceed with delete action
+                if (isConfirmed) {
+                  deleteProperty(); // Call your delete function here
+                } else {
+                  // If user cancels, do nothing or show a message
+                  console.log("Deletion cancelled");
+                }
+              });
+            });
+
+            const detailsIcons = document.querySelectorAll(".details-icon");
+            detailsIcons.forEach((icon) => {
+              icon.addEventListener("click", showPropertyDetails);
+            });
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      fetchDataAndPopulateTable();
+
+      // Function to handle delete property action
+      function deleteProperty(event) {
+        const row = event.target.closest("tr"); // Find the closest row to the clicked icon
+        const propertyId = row.getAttribute("data-id"); // Get the value of the data-id attribute
+
+        fetch(`http://localhost:5000/properties/deletebyID/${propertyId}`, {
+          method: "DELETE",
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Property deleted successfully!");
+              row.remove();
+            } else {
+              console.error("Failed to delete property.");
+            }
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Function to handle property details action
+      function showPropertyDetails(event) {
+        const row = event.target.closest("tr");
+        const propertyId = row.getAttribute("data-id");
+
+        fetch(`http://localhost:5000/properties/getpropertybyID/${propertyId}`)
+          .then((response) => response.json())
+          .then((property) => {
+            const modalBody = document.getElementById("propertyDetailsBody");
+            modalBody.innerHTML = `
+                        <p><strong>Builder Name:</strong> ${property.builderName}</p>
+                        <p><strong>BHK:</strong> ${property.bhk}</p>
+                        <p><strong>Project Name:</strong> ${property.projectName}</p>
+                        <p><strong>Property Budget:</strong> ${property.propertybudget} ${property.propertybudget_unit}</p>
+                        <p><strong>Property Location:</strong> ${property.propertylocation}</p>
+                        <p><strong>Property Description:</strong> ${property.propertydescription}</p>
+                        <p><strong>Property Image:</strong> ${property.image}</p>
+                        <p><strong>Property Area:</strong> ${property.propertyArea} ${property.propertyArea_unit}</p>
+                        <p><strong>Floor Plan:</strong> ${property.floorplan}</p>
+                        <p><strong>Amenities:</strong> ${property.amenities}</p>
+                        <p><strong>Number of Towers:</strong> ${property.numberofTowers}</p>
+                        <p><strong>Number of Floors:</strong> ${property.numberoffloors}</p>
+                        <p><strong>Possession Date:</strong> ${property.possession}</p>
+                        <p><strong>Land Parcel:</strong> ${property.landParcel} ${property.landParcelUnit}</p>
+                    `;
+            $("#propertyDetailsModal").modal("show");
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      document.getElementById("addData").addEventListener("click", function () {
+        window.location.href = "addproperty.html";
+      });
+    </script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

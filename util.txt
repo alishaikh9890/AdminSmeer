@@ -1,0 +1,226 @@
+<!-- <option value="11">Ambegaon Budruk
+                            </option>
+                            <option value="14">Ambi
+                            </option>
+                            <option value="15">Aundh
+                            </option>
+                            <option value="3">Balewadi
+                            </option>
+                            <option value="1">Baner
+                            </option>
+                            <option value="17">Bavdhan
+                            </option>
+                            <option value="18">Bavdhan�&nbsp;Budruk
+                            </option>
+                            <option value="19">Bavdhan�&nbsp;Khurd
+                            </option>
+                            <option value="33">Bhavani Peth
+                            </option>
+                            <option value="34">Bhor
+                            </option>
+                            <option value="35">Bhosari
+                            </option>
+                            <option value="36">Bhugaon
+                            </option>
+                            <option value="37">Bhukum
+                            </option>
+                            <option value="38">Bibvewadi
+                            </option>
+                            <option value="39">Budhwar Peth
+                            </option>
+                            <option value="40">Bund Garden
+                            </option>
+                            <option value="41">Chakan
+                            </option>
+                            <option value="57">Chandan Nagar
+                            </option>
+                            <option value="58">Chandni Chowk
+                            </option>
+                            <option value="59">Chikhli
+                            </option>
+                            <option value="60">Chimbali
+                            </option>
+                            <option value="61">Dapodi
+                            </option>
+                            <option value="62">Daund
+                            </option>
+                            <option value="63">Dehu Road
+                            </option>
+                            <option value="64">Dhankawadi
+                            </option>
+                            <option value="65">Dhanori
+                            </option>
+                            <option value="80">Dhayari
+                            </option>
+                            <option value="81">Dighi
+                            </option>
+                            <option value="82">Dudulgaon
+                            </option>
+                            <option value="83">Erandwane
+                            </option>
+                            <option value="84">Fursungi
+                            </option>
+                            <option value="85">Ganesh Peth
+                            </option>
+                            <option value="86">Ganj Peth
+                            </option>
+                            <option value="87">Ghorpade Peth
+                            </option>
+                            <option value="88">Ghorpadi
+                            </option>
+                            <option value="89">Guruwar Peth
+                            </option>
+                            <option value="104">Hadapsar
+                            </option>
+                            <option value="105">Haveli
+                            </option>
+                            <option value="106">Hingne Khurd
+                            </option>
+                            <option value="4">Hinjewadi
+                            </option>
+                            <option value="108">Kalas
+                            </option>
+                            <option value="109">Kalewadi
+                            </option>
+                            <option value="110">Kalyani Nagar
+                            </option>
+                            <option value="111">Karve Nagar
+                            </option>
+                            <option value="112">Kasarwadi
+                            </option>
+                            <option value="113">Kasba Peth
+                            </option>
+                            <option value="20">Keshav Nagar
+                            </option>
+                            <option value="21">Khadakwasla Dam
+                            </option>
+                            <option value="22">Khadki
+                            </option>
+                            <option value="6">Kharadi
+                            </option>
+                            <option value="24">Kiwale
+                            </option>
+                            <option value="25">Kondhwa
+                            </option>
+                            <option value="9">Koregaon Park
+                            </option>
+                            <option value="2">Kothrud
+                            </option>
+                            <option value="28">Link Road
+                            </option>
+                            <option value="29">Maan
+                            </option>
+                            <option value="30">Mandai
+                            </option>
+                            <option value="31">Mangalwar Peth
+                            </option>
+                            <option value="32">Manjri
+                            </option>
+                            <option value="42">Mohammed Wadi
+                            </option>
+                            <option value="43">Moshi
+                            </option>
+                            <option value="10">Mundhwa
+                            </option>
+                            <option value="45">Nana Peth
+                            </option>
+                            <option value="46">Nanded
+                            </option>
+                            <option value="47">Narayan Peth
+                            </option>
+                            <option value="48">Panmala
+                            </option>
+                            <option value="49">Parandwadi
+                            </option>
+                            <option value="50">Parvati
+                            </option>
+                            <option value="51">Pashan
+                            </option>
+                            <option value="52">Phugewadi
+                            </option>
+                            <option value="53">Pimple Gurav
+                            </option>
+                            <option value="54">Pimple Nilakh
+                            </option>
+                            <option value="55">Pimple Saudagar
+                            </option>
+                            <option value="56">Pimpri
+                            </option>
+                            <option value="8">Pimpri - Chinchwad
+                            </option>
+                            <option value="67">Pirangut
+                            </option>
+                            <option value="68">Punawale
+                            </option>
+                            <option value="69">Pune Cantonment
+                            </option>
+                            <option value="70">Pune Station
+                            </option>
+                            <option value="71">Rahatani
+                            </option>
+                            <option value="72">Rasta Peth
+                            </option>
+                            <option value="73">Ravet
+                            </option>
+                            <option value="74">Raviwar Peth
+                            </option>
+                            <option value="75">Sadashiv Peth
+                            </option>
+                            <option value="76">Sangvi
+                            </option>
+                            <option value="77">Sastri Nagar
+                            </option>
+                            <option value="78">Shahunagar
+                            </option>
+                            <option value="103">Shaniwar Peth
+                            </option>
+                            <option value="79">Shivaji Nagar
+                            </option>
+                            <option value="90">Shivane
+                            </option>
+                            <option value="91">Shukrawar Peth
+                            </option>
+                            <option value="92">Sinhagad Road
+                            </option>
+                            <option value="93">Somatne
+                            </option>
+                            <option value="94">Somwar Peth
+                            </option>
+                            <option value="95">Spine Road
+                            </option>
+                            <option value="96">Sus Road
+                            </option>
+                            <option value="97">Talawade
+                            </option>
+                            <option value="98">Talegaon
+                            </option>
+                            <option value="5">Tathawade
+                            </option>
+                            <option value="100">Thergaon
+                            </option>
+                            <option value="101">Undri
+                            </option>
+                            <option value="102">Urse
+                            </option>
+                            <option value="123">Vadgaon Budruk
+                            </option>
+                            <option value="124">Vadgaon Khurd
+                            </option>
+                            <option value="114">Vadgaon Maval
+                            </option>
+                            <option value="115">Vallabha Nagar
+                            </option>
+                            <option value="116">Vishrantwadi
+                            </option>
+                            <option value="117">Wadgaonsheri
+                            </option>
+                            <option value="118">Wagholi
+                            </option>
+                            <option value="7">Wakad
+                            </option>
+                            <option value="120">Wanowrie
+                            </option>
+                            <option value="121">Warje
+                            </option>
+                            <option value="122">Yerwada
+                            </option> -->
