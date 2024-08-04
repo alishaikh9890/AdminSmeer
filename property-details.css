@@ -4,20 +4,39 @@
     top:110px;
 }
 
+
 .scrollClassStop{
    position: absolute !important;
     bottom:20px !important;
     height: fit-content;
    
 }
-/* #dynamic{
-    position: absolute !important;
-    bottom:0%;
-} */
+#dynamic3 > div > a{
+  aspect-ratio: 1/1;
+  padding: 5px 8px;
+  transition: all 0.5s;
+  color: gray;
+}
 
+#dynamic3 > div > a:hover{
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     border: none;
+     color: #f16745;
+}
+.scrollClass3{
+    position: fixed;
+    width: 70px;
+    top: 130px;
+}
+.scrollClassStop3{
+    position: absolute !important;
+     bottom:20px !important;
+     height: fit-content;
+     width: 70px !important;
+ }
 #bing{
     position: relative;
-    border: 1px solid red;
+
    
 }
 
@@ -68,4 +87,13 @@ background: white !important;
 }
 .big{
     font-size:30px
+}
+
+.container{
+    position: relative;
+}
+
+.fix{
+    position: sticky !important;
+    top: 100px;
 }

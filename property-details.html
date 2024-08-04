@@ -88,10 +88,10 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+      <div id="home" class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Property Details</h2>
+          <h2 id="bin3">Property Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Property Details</li>
@@ -108,7 +108,28 @@
         <div class="row gy-4 px-2">
 
           <div class="col-lg-1 border">
-
+             <div class="container h-100 pt-5 px-4">
+                <div id="dynamic3" class="row row-cols-1 rounded shadow">
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="#home" class="border rounded-circle "><i class="bi bi-house-door"></i></a>
+                  </div>
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="#acordian" class="border rounded-circle "><i class="bi bi-menu-button-wide-fill"></i></a>
+                  </div>
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="" class="border rounded-circle "><i class="bi bi-key"></i></a>
+                  </div>
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="" class="border rounded-circle "><i class="bi bi-camera-reels"></i></a>
+                  </div>
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="" class="border rounded-circle "><i class="bi bi-box"></i></a>
+                  </div>
+                  <div class="col fs-4 py-2 d-flex justify-content-center">
+                    <a href="#map" class="border rounded-circle "><i class="bi bi-geo-alt"></i></a>
+                  </div>
+                </div>
+             </div>
           </div>
 
           <div class="col-lg-8 shadow rounded bg-white pt-5">
@@ -161,7 +182,7 @@
           </div>
          </div>
 
-         <hr>
+         <hr id="acordian"/>
 
           <div class="container mt-5">
             <h3>Floor plans</h3>
@@ -258,8 +279,8 @@
 
          </div>
 
-         <div class="container mt-5">
-          <h3>Location details:</h3>
+         <div id="map" class="container mt-5">
+          <h3 id="bin4">Location details:</h3>
           <iframe  id="bin2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18616.8553457607!2d73.93569521266866!3d18.552738563401604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3288ba495%3A0x38e833613a63004a!2sKharadi%2C%20Pune%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1722689728236!5m2!1sen!2sin" width="100%" height="450" class="p-1 shadow rounded bg-" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
 
@@ -473,6 +494,52 @@ $('#dynamic').removeClass('scrollClassStop');
 });
 
   </script>
+
+<script>
+
+  $(document).ready(function() {
+  
+  $(window).scroll(function() {
+  
+  var scroll = $(window).scrollTop();
+  
+  var objSel = $('#bin3');
+  
+  var objPos = objSel.offset().top;
+  
+   if(scroll > objPos){
+     $('#dynamic3').addClass('scrollClass3');
+  } else {
+  $('#dynamic3').removeClass('scrollClass3');
+  }
+  
+  });
+  });
+  
+    </script>
+<script>
+
+  $(document).ready(function() {
+  
+  $(window).scroll(function() {
+  
+  var scroll = $(window).scrollTop();
+  
+  var objSel = $('#bin4');
+  
+  var objPos = objSel.offset().top;
+  
+   if(scroll > objPos){
+     $('#dynamic3').addClass('scrollClassStop3');
+     $('#dynamic3').removeClass('scrollClass3');
+  } else {
+  $('#dynamic3').removeClass('scrollClassStop3');
+  }
+  
+  });
+  });
+  
+    </script>
 
 </body>
 
