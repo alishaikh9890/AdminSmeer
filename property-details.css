@@ -1,8 +1,26 @@
 
-.pro-form1{
-    position: sticky;
-    top:70%;
+.scrollClass{
+   position: fixed;
+    top:110px;
 }
+
+.scrollClassStop{
+   position: absolute !important;
+    bottom:20px !important;
+    height: fit-content;
+   
+}
+/* #dynamic{
+    position: absolute !important;
+    bottom:0%;
+} */
+
+#bing{
+    position: relative;
+    border: 1px solid red;
+   
+}
+
 
 .property-form-box i{
 position: absolute;
